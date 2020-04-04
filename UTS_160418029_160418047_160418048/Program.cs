@@ -16,7 +16,7 @@ namespace UTS_160418029_160418047_160418048
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormLogin());
+            Application.Run(new FormMenu());
         }
     }
 }

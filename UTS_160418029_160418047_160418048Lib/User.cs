@@ -60,17 +60,17 @@ namespace UTS_160418029_160418047_160418048Lib
             User.BeriHakAkses(u, namaServer, namaDatabase);
         }
 
-        public static List<User> BacaData(string pUsername)
+        public static List<User> BacaData(string pUsername, string nilaiKriteria)
         {
             string sql = "";
 
             if (pUsername == "")
             {
-                sql = "SELECT username,role from user";
+                sql = "SELECT * from user";
             }
             else
             {
-                sql = "SELECT username,role from user where username like '%" + pUsername + "%'";
+                sql = "SELECT * from user where " + pUsername + " like '%" + nilaiKriteria + "%'";
             }
 
             MySqlDataReader hasil = Koneksi.JalankanPerintahQuery(sql);
@@ -78,7 +78,8 @@ namespace UTS_160418029_160418047_160418048Lib
             List<User> listUser = new List<User>();
             while (hasil.Read() == true)
             {
-                User u = new User(hasil.GetValue(0).ToString(), hasil.GetValue(1).ToString());
+                User u = new User(int.Parse(hasil.GetValue(0).ToString()), hasil.GetValue(1).ToString(), hasil.GetValue(2).ToString(),
+                    hasil.GetValue(3).ToString(), hasil.GetValue(4).ToString());
                 listUser.Add(u);
             }
             return listUser;
@@ -86,7 +87,7 @@ namespace UTS_160418029_160418047_160418048Lib
         public static bool cekUser(string username)
         {
             List<User> users = new List<User>();
-            users=BacaData(username);
+            users=BacaData("username",username);
             bool duplikat = false;
             if (users.Count() > 0)
                 duplikat = true;
@@ -96,7 +97,7 @@ namespace UTS_160418029_160418047_160418048Lib
         public static int getRegisterId()
         {
             List<User> users = new List<User>();
-            users = BacaData("");
+            users = BacaData("username","");
             return users.Count() + 1;
         }
     }

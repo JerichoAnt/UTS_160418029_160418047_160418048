@@ -34,32 +34,30 @@ namespace UTS_160418029_160418047_160418048
 
                     Koneksi koneksi2 = new Koneksi();
 
-                   // this.Owner.Enabled = true;
-
-                    MessageBox.Show("Koneksi berhasil. Selamat menggunakan aplikasi.", "Informasi");
-                    
-                    listUser = User.BacaData(textBoxUsername.Text);
+                    listUser = User.BacaData("username", textBoxUsername.Text);
 
                     if (listUser.Count > 0)
                     {
                         FormMenu formMenu = (FormMenu)this.MdiParent;
-                        
-                        formMenu.labelUsername.Text = listUser[0].Username.ToString();
+                        formMenu.labelUsername.Text = listUser[0].Username;
                         formMenu.labelRole.Text = listUser[0].Role;
-
-                        formMenu.PengaturanHakAksesMenu(listUser[0]);
 
                         formMenu.userLogin = listUser[0];
 
-                        MessageBox.Show("Koneksi berhasil. Selamat Menggunakan Aplikasi", "Informasi");
+                        FormPilihan formPilihan = new FormPilihan(formMenu);
+                        formPilihan.MdiParent = this.MdiParent;
+                        formPilihan.PengaturanHakAksesMenu(listUser[0].Role);
+                        formPilihan.Show();
+                        this.Close();
 
+                        MessageBox.Show("Koneksi berhasil. Selamat Menggunakan Aplikasi", "Informasi");
                         this.Close();
                     }
                     else
                     {
                         MessageBox.Show("Username tidak ditemukan");
                     }
-                    this.Close();
+                    
                 }
             }
             catch (Exception exception)

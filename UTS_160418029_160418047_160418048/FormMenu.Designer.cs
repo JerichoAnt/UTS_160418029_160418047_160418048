@@ -28,32 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.buttonPembeli = new System.Windows.Forms.Button();
-            this.buttonPenjual = new System.Windows.Forms.Button();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.label1 = new System.Windows.Forms.Label();
             this.labelUsername = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.labelRole = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // buttonPembeli
-            // 
-            this.buttonPembeli.Location = new System.Drawing.Point(205, 154);
-            this.buttonPembeli.Name = "buttonPembeli";
-            this.buttonPembeli.Size = new System.Drawing.Size(75, 23);
-            this.buttonPembeli.TabIndex = 0;
-            this.buttonPembeli.Text = "Pembeli";
-            this.buttonPembeli.UseVisualStyleBackColor = true;
-            // 
-            // buttonPenjual
-            // 
-            this.buttonPenjual.Location = new System.Drawing.Point(399, 154);
-            this.buttonPenjual.Name = "buttonPenjual";
-            this.buttonPenjual.Size = new System.Drawing.Size(75, 23);
-            this.buttonPenjual.TabIndex = 1;
-            this.buttonPenjual.Text = "Penjual";
-            this.buttonPenjual.UseVisualStyleBackColor = true;
             // 
             // toolStrip1
             // 
@@ -109,8 +89,6 @@
             this.Controls.Add(this.labelUsername);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.toolStrip1);
-            this.Controls.Add(this.buttonPenjual);
-            this.Controls.Add(this.buttonPembeli);
             this.IsMdiContainer = true;
             this.Name = "FormMenu";
             this.Text = "FormMenu";
@@ -121,9 +99,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button buttonPembeli;
-        private System.Windows.Forms.Button buttonPenjual;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;

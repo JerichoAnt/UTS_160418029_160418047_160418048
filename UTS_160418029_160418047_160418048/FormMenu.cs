@@ -23,32 +23,10 @@ namespace UTS_160418029_160418047_160418048
         {
             this.WindowState = FormWindowState.Maximized;
 
-            this.Enabled = false;
-
+            this.IsMdiContainer = true;
             FormLogin formLogin = new FormLogin();
-            formLogin.Owner = this;
+            formLogin.MdiParent = this;
             formLogin.Show();
-        }
-
-        public void PengaturanHakAksesMenu(User u)
-        {
-            if (u.Role.ToLower() == "Admin")
-            {
-                buttonPembeli.Visible = true;
-                buttonPenjual.Visible = true;
-            }
-
-            else if (u.Role.ToLower() == "Penjual")
-            {
-                buttonPembeli.Visible = false;
-                buttonPenjual.Visible = true;
-            }
-
-            else if (u.Role.ToLower() == "Pembeli")
-            {
-                buttonPembeli.Visible = true;
-                buttonPenjual.Visible = false;
-            }
         }
     }
 }
