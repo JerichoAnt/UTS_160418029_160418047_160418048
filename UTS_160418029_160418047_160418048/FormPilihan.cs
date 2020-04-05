@@ -23,7 +23,12 @@ namespace UTS_160418029_160418047_160418048
 
         private void buttonPembeli_Click(object sender, EventArgs e)
         {
-
+            FormListBarang formListBarang = new FormListBarang();
+            formListBarang.Owner = this;
+            formListBarang.Tag = "beli";
+            formListBarang.Show();
+            
+            formListBarang.Location = this.Location;
         }
         public FormPilihan(FormMenu formMenu)
         {
@@ -38,6 +43,7 @@ namespace UTS_160418029_160418047_160418048
             {
                 buttonPembeli.Visible = true;
                 buttonPenjual.Visible = true;
+               
             }
 
             else if (u == "penjual")
@@ -55,7 +61,17 @@ namespace UTS_160418029_160418047_160418048
 
         private void FormPilihan_Load(object sender, EventArgs e)
         {
+          
+        }
 
+        private void buttonPenjual_Click(object sender, EventArgs e)
+        {
+            FormListBarang formListBarang = new FormListBarang();
+            formListBarang.Owner = this;
+            formListBarang.Tag = "jual";
+            formListBarang.Show();
+            
+            formListBarang.Location = this.Location;
         }
     }
 }

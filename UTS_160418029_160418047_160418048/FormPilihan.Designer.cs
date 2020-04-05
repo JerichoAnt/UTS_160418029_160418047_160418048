@@ -34,31 +34,35 @@
             // 
             // buttonPembeli
             // 
-            this.buttonPembeli.Location = new System.Drawing.Point(119, 151);
+            this.buttonPembeli.Location = new System.Drawing.Point(159, 186);
+            this.buttonPembeli.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonPembeli.Name = "buttonPembeli";
-            this.buttonPembeli.Size = new System.Drawing.Size(75, 23);
+            this.buttonPembeli.Size = new System.Drawing.Size(187, 154);
             this.buttonPembeli.TabIndex = 0;
-            this.buttonPembeli.Text = "button1";
+            this.buttonPembeli.Text = "Pembeli";
             this.buttonPembeli.UseVisualStyleBackColor = true;
             this.buttonPembeli.Click += new System.EventHandler(this.buttonPembeli_Click);
             // 
             // buttonPenjual
             // 
-            this.buttonPenjual.Location = new System.Drawing.Point(419, 151);
+            this.buttonPenjual.Location = new System.Drawing.Point(559, 186);
+            this.buttonPenjual.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonPenjual.Name = "buttonPenjual";
-            this.buttonPenjual.Size = new System.Drawing.Size(75, 23);
+            this.buttonPenjual.Size = new System.Drawing.Size(187, 154);
             this.buttonPenjual.TabIndex = 1;
-            this.buttonPenjual.Text = "button1";
+            this.buttonPenjual.Text = "Penjual";
             this.buttonPenjual.UseVisualStyleBackColor = true;
+            this.buttonPenjual.Click += new System.EventHandler(this.buttonPenjual_Click);
             // 
             // FormPilihan
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.buttonPenjual);
             this.Controls.Add(this.buttonPembeli);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FormPilihan";
             this.Text = "FormPilihan";
             this.Load += new System.EventHandler(this.FormPilihan_Load);
