@@ -41,21 +41,21 @@ namespace UTS_160418029_160418047_160418048
         {
             if (u == "admin")
             {
-                buttonPembeli.Visible = true;
-                buttonPenjual.Visible = true;
+                buttonDaftarBarang.Visible = true;
+                buttonKatalog.Visible = true;
                
             }
 
             else if (u == "penjual")
             {
-                buttonPembeli.Visible = false;
-                buttonPenjual.Visible = true;
+                buttonDaftarBarang.Visible = false;
+                buttonKatalog.Visible = true;
             }
 
             else if (u == "pembeli")
             {
-                buttonPembeli.Visible = true;
-                buttonPenjual.Visible = false;
+                buttonDaftarBarang.Visible = true;
+                buttonKatalog.Visible = false;
             }
         }
 
@@ -72,6 +72,11 @@ namespace UTS_160418029_160418047_160418048
             formListBarang.Show();
             
             formListBarang.Location = this.Location;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
